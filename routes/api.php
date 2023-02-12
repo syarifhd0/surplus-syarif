@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['jsonify'], 'prefix' => 'v1'], function ($api) {
     $api->resource('category','CategoryController');
     $api->resource('product','ProductController');
+    $api->resource('image','ImageController');
 });
