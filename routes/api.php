@@ -29,5 +29,15 @@ Route::group(['middleware' => ['jsonify'], 'prefix' => 'v1'], function ($api) {
         $api->get('/{productId}/category', 'ProductController@getCategoryProduct');
         $api->post('/{productId}/category/{categoryId}', 'ProductController@postCategoryProductById');
         $api->delete('/{productId}/category/{categoryId}', 'ProductController@deleteCategoryProductById');
+
+        $api->get('/{productId}/image', 'ProductController@getProductImage');
+        $api->post('/{productId}/image/{imageId}', 'ProductController@postProductImageById');
+        $api->delete('/{productId}/image/{imageId}', 'ProductController@deleteProductImageById');
+    });
+
+    $api->group(['prefix' => '/image'], function ($api) {
+        $api->get('/{imageId}/product', 'ImageController@getProductImage');
+        $api->post('/{imageId}/product/{productId}', 'ImageController@postProductImageById');
+        $api->delete('/{imageId}/product/{productId}', 'ImageController@deleteProductImageById');
     });
 });

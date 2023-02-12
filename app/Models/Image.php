@@ -14,4 +14,8 @@ class Image extends Model
     protected $fillable = ['name','file','enable'];
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
+
+    public function product_image(){
+        return $this->hasMany(ProductImage::class,'image_id');
+    }
 }

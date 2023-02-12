@@ -8,6 +8,8 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\CategoryProduct;
+use App\Models\ProductImage;
+use App\Models\Image;
 use Response;
 
 class ProductController extends Controller
@@ -194,7 +196,7 @@ class ProductController extends Controller
 	 * @param \Illuminate\Http\Request $request
 	 * @return \Illuminate\Http\JsonResponse
 	 */
-	public function postCategoryProductById($categoryId, $productId, Request $request)
+	public function postCategoryProductById($productId, $categoryId, Request $request)
 	{
 		$model = $this->table->find($productId);
 
@@ -252,4 +254,89 @@ class ProductController extends Controller
 			return $this->errorResponse('Error Deleting ' . $this->sub_module_name,500);
 		}
 	}
+
+	/**
+	* Display a listing of the resource.
+	*
+	* @param \Illuminate\Http\Request $request
+	* @return \Illuminate\Http\JsonResponse
+	*/
+   public function getProductImage($productId, Request $request)
+   {
+	   try {
+		   $query = new Image;
+		   $query = $query->whereHas('product_image',function($q) use ($productId){
+			   $q->where('product_id',$productId);
+		   });
+		   
+		   return $this->successResponse($query->get(),200);
+	   } catch (\Exception $e) {
+		   return $this->errorResponse('Error Displaying ' . $this->sub_module_name,500);
+	   }
+   }
+
+   /**
+	* Display a listing of the resource.
+	*
+	* @param \Illuminate\Http\Request $request
+	* @return \Illuminate\Http\JsonResponse
+	*/
+   public function postProductImageById($productId, $imageId, Request $request)
+   {
+	   $model = $this->table->find($productId);
+
+	   if (!$model) {
+		   return $this->errorResponse('Not found', 404);
+	   }
+
+	   try {
+		   \DB::beginTransaction();
+
+		   $attribute = [
+			   'image_id' => $imageId
+		   ];
+		   $query = $model->product_image()->updateOrCreate($attribute,$attribute);
+
+		   if($query){
+			   \DB::commit();
+			   return $this->successResponse(['image_id' => $imageId],201);
+		   }
+
+	   } catch (\Exception $e) {
+		   \DB::rollBack();
+		   return $this->errorResponse('Internal Error Creating ' . $this->sub_module_name,500);
+	   } catch (\Throwable $e) {
+		   \DB::rollBack();
+		   return $this->errorResponse('Error Creating ' . $this->sub_module_name,500);
+	   }
+   }
+
+   /**
+	* Display a listing of the resource.
+	*
+	* @param \Illuminate\Http\Request $request
+	* @return \Illuminate\Http\JsonResponse
+	*/
+   public function deleteProductImageById($productId, $imageId, Request $request)
+   {
+	   $model = $this->table->find($productId);
+	   if (!$model) {
+		   return $this->errorResponse('Not found', 404);
+	   }
+
+	   try {
+		   
+		   $query = $model->product_image()->where('image_id',$imageId)->delete();
+		   if($query){
+			   \DB::commit();
+			   return $this->successResponse(['image_id' => $imageId],200);
+		   }
+	   } catch (\Exception $e) {
+		   \DB::rollBack();
+		   return $this->errorResponse('Internal Error Deleting ' . $this->sub_module_name,500);
+	   } catch (\Throwable $e) {
+		   \DB::rollBack();
+		   return $this->errorResponse('Error Deleting ' . $this->sub_module_name,500);
+	   }
+   }
 }
