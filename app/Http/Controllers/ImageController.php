@@ -106,7 +106,7 @@ class ImageController extends Controller
 			\File::delete($oldFile);
 		}
 
-		$folderPath = storage_path($this->table->IMAGE_DIRECTORY);
+		$folderPath = storage_path('images/');
 		$rawImageBase64 = explode(";base64,", $newFile);
 		$explodeImage = explode("image/", $rawImageBase64[0]);
 		$imageType = $explodeImage[1];

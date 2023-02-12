@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Image extends Model
 {
     use SoftDeletes;
-
-    const IMAGE_DIRECTORY = 'images/';
     
     protected $table = 'image';
 
