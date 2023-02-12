@@ -18,4 +18,16 @@ Route::group(['middleware' => ['jsonify'], 'prefix' => 'v1'], function ($api) {
     $api->resource('category','CategoryController');
     $api->resource('product','ProductController');
     $api->resource('image','ImageController');
+
+    $api->group(['prefix' => '/category'], function ($api) {
+        $api->get('/{categoryId}/product', 'CategoryController@getCategoryProduct');
+        $api->post('/{categoryId}/product/{productId}', 'CategoryController@postCategoryProductById');
+        $api->delete('/{categoryId}/product/{productId}', 'CategoryController@deleteCategoryProductById');
+    });
+
+    $api->group(['prefix' => '/product'], function ($api) {
+        $api->get('/{productId}/category', 'ProductController@getCategoryProduct');
+        $api->post('/{productId}/category/{categoryId}', 'ProductController@postCategoryProductById');
+        $api->delete('/{productId}/category/{categoryId}', 'ProductController@deleteCategoryProductById');
+    });
 });

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+use App\Models\CategoryProduct;
+use App\Models\Product;
 use Response;
 
 class CategoryController extends Controller
@@ -21,6 +23,7 @@ class CategoryController extends Controller
 
 		$this->table       = $table;
 		$this->module_name = 'Category';
+		$this->sub_module_name = 'Category Product';
 	}
 
     /**
@@ -161,6 +164,91 @@ class CategoryController extends Controller
 		} catch (\Throwable $e) {
 			\DB::rollBack();
 			return $this->errorResponse('Error Deleting ' . $this->module_name,500);
+		}
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @param \Illuminate\Http\Request $request
+	 * @return \Illuminate\Http\JsonResponse
+	 */
+	public function getCategoryProduct($categoryId, Request $request)
+	{
+		try {
+			$query = new Product;
+			$query = $query->whereHas('category_product',function($q) use ($categoryId){
+				$q->where('category_id',$categoryId);
+			});
+            
+			return $this->successResponse($query->get(),200);
+		} catch (\Exception $e) {
+			return $this->errorResponse('Error Displaying ' . $this->sub_module_name,500);
+		}
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @param \Illuminate\Http\Request $request
+	 * @return \Illuminate\Http\JsonResponse
+	 */
+	public function postCategoryProductById($categoryId, $productId, Request $request)
+	{
+		$model = $this->table->find($categoryId);
+
+		if (!$model) {
+			return $this->errorResponse('Not found', 404);
+		}
+
+		try {
+			\DB::beginTransaction();
+
+			$attribute = [
+				'product_id' => $productId
+			];
+			$query = $model->category_product()->updateOrCreate($attribute,$attribute);
+
+			if($query){
+				\DB::commit();
+				return $this->successResponse(['product_id' => $productId],201);
+			}
+
+		} catch (\Exception $e) {
+			\DB::rollBack();
+			return $this->errorResponse('Internal Error Creating ' . $this->sub_module_name,500);
+		} catch (\Throwable $e) {
+			\DB::rollBack();
+			return $this->errorResponse('Error Creating ' . $this->sub_module_name,500);
+		}
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @param \Illuminate\Http\Request $request
+	 * @return \Illuminate\Http\JsonResponse
+	 */
+	public function deleteCategoryProductById($categoryId, $productId, Request $request)
+	{
+		$model = $this->table->find($categoryId);
+		if (!$model) {
+			return $this->errorResponse('Not found', 404);
+		}
+
+		try {
+			
+			$query = $model->category_product()->where('product_id',$productId)->delete();
+			if($query){
+				\DB::commit();
+				return $this->successResponse(['product_id' => $productId],200);
+			}
+		} catch (\Exception $e) {
+			\DB::rollBack();
+			return $this->errorResponse('Internal Error Deleting ' . $this->sub_module_name,500);
+		} catch (\Throwable $e) {
+			\DB::rollBack();
+			return $this->errorResponse('Error Deleting ' . $this->sub_module_name,500);
 		}
 	}
 }
