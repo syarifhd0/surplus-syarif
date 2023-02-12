@@ -8,5 +8,4 @@
 - copy .env.example & rename to .env
 - create database "surplus_syarif"
 - php artisan migrate
-- php artisan db:seed
 - php artisan key:generate
