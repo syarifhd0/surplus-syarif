@@ -14,4 +14,8 @@ class Product extends Model
     protected $fillable = ['name','description','enable'];
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
+
+    public function category_product(){
+        return $this->hasMany(CategoryProduct::class,'product_id');
+    }
 }

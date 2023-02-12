@@ -14,4 +14,8 @@ class Category extends Model
     protected $fillable = ['name','enable'];
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
+
+    public function category_product(){
+        return $this->hasMany(CategoryProduct::class,'category_id');
+    }
 }
