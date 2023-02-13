@@ -1,0 +1,2584 @@
+{
+	"info": {
+		"_postman_id": "46d1b98c-fe3c-4c4a-8392-2afddb5e52e6",
+		"name": "Surplus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3323931"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "CategoryProduct",
+					"item": [
+						{
+							"name": "Get Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/category/1/product",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category",
+										"1",
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/category/1/product",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"category",
+												"1",
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:26:13 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:26:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 4,\n                \"name\": \"Arch Girder\",\n                \"description\": \"no description\",\n                \"enable\": 1\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/category/1/product/4",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category",
+										"1",
+										"product",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/category/1/product/3",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"category",
+												"1",
+												"product",
+												"3"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:26:25 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:26:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"product_id\": \"3\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/category/1/product/3",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category",
+										"1",
+										"product",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/category/1/product/3",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"category",
+												"1",
+												"product",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:26:36 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:26:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"product_id\": \"3\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/category?global_search=Building&enable=1&prop=id&dir=desc",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "global_search",
+									"value": "Building"
+								},
+								{
+									"key": "enable",
+									"value": "1"
+								},
+								{
+									"key": "prop",
+									"value": "id"
+								},
+								{
+									"key": "dir",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/category?global_search=Building&enable=1&prop=id&dir=desc",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category"
+									],
+									"query": [
+										{
+											"key": "global_search",
+											"value": "Building"
+										},
+										{
+											"key": "enable",
+											"value": "1"
+										},
+										{
+											"key": "prop",
+											"value": "id"
+										},
+										{
+											"key": "dir",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:23:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:23:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"name\": \"Building\",\n                \"enable\": 1\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/category/2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/category/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:24:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:24:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"id\": 2,\n            \"name\": \"Infrastructure\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Category\",\r\n    \"enable\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/category",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"New Category\",\r\n    \"enable\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/category",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:24:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:24:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"name\": \"New Category\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Update Category\",\r\n    \"enable\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/category/2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Update Category\",\r\n    \"enable\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/category/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:25:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:25:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"name\": \"Update Category\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/category/2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/category/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:25:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:25:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"id\": \"2\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "CategoryProduct",
+					"item": [
+						{
+							"name": "Get Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/1/category",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"1",
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/product/1/category",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"product",
+												"1",
+												"category"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:38:08 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:38:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"name\": \"Building\",\n                \"enable\": 1\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Understructure\",\n                \"enable\": 1\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/2/category/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"2",
+										"category",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/product/2/category/3",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"product",
+												"2",
+												"category",
+												"3"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:42:57 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:42:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"category_id\": \"3\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/2/category/3",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"2",
+										"category",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/product/2/category/3",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"product",
+												"2",
+												"category",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:45:58 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:45:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"category_id\": \"3\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product Image",
+					"item": [
+						{
+							"name": "Get Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/2/image",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"2",
+										"image"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/product/2/image",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"product",
+												"2",
+												"image"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:47:25 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:47:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 2,\n                \"name\": \"Image 2\",\n                \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e8ebc3ddd26.png\",\n                \"enable\": 1\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Image 3\",\n                \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e8ebc4c1f77.png\",\n                \"enable\": 0\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/2/image/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"2",
+										"image",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/product/2/image/4",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"product",
+												"2",
+												"image",
+												"4"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:47:42 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:47:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"image_id\": \"4\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/2/image/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"2",
+										"image",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/product/2/image/2",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"product",
+												"2",
+												"image",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:48:14 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:48:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"image_id\": \"2\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/product?global_search=Girder&enable=1&prop=id&dir=desc",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "global_search",
+									"value": "Girder"
+								},
+								{
+									"key": "enable",
+									"value": "1"
+								},
+								{
+									"key": "prop",
+									"value": "id"
+								},
+								{
+									"key": "dir",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product?global_search=Girder&enable=1&prop=id&dir=desc",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "global_search",
+											"value": "Girder"
+										},
+										{
+											"key": "enable",
+											"value": "1"
+										},
+										{
+											"key": "prop",
+											"value": "id"
+										},
+										{
+											"key": "dir",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:30:32 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:30:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 4,\n                \"name\": \"Arch Girder\",\n                \"description\": \"no description\",\n                \"enable\": 1\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Box Girder\",\n                \"description\": \"no description\",\n                \"enable\": 1\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/product/3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"product",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/3",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:30:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"id\": 3,\n            \"name\": \"Box Girder\",\n            \"description\": \"no description\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Product\",\r\n    \"description\":\"ini produk baru\",\r\n    \"enable\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/product",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"New Product\",\r\n    \"description\":\"ini produk baru\",\r\n    \"enable\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/product",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:31:27 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:31:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"name\": \"New Product\",\n            \"description\": \"ini produk baru\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Update Product\",\r\n    \"description\":\"test 1 2 3\",\r\n    \"enable\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/product/1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Update Product\",\r\n    \"description\":\"test 1 2 3\",\r\n    \"enable\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/product/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:32:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:32:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"name\": \"Update Product\",\n            \"description\": \"test 1 2 3\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/product/1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/product/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:33:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:33:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"id\": \"1\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Product Image",
+					"item": [
+						{
+							"name": "Get Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/image/1/product",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image",
+										"1",
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Product",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/image/1/product",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"image",
+												"1",
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:48:53 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:48:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 3,\n                \"name\": \"Box Girder\",\n                \"description\": \"no description\",\n                \"enable\": 1\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/image/2/product/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image",
+										"2",
+										"product",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Product",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/image/2/product/2",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"image",
+												"2",
+												"product",
+												"2"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:50:16 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:50:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"product_id\": \"2\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/image/2/product/2",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image",
+										"2",
+										"product",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Product",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{api_url}}/image/2/product/2",
+											"host": [
+												"{{api_url}}"
+											],
+											"path": [
+												"image",
+												"2",
+												"product",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:50:32 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 13 Feb 2023 00:50:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"product_id\": \"2\"\n        }\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/image?global_search=image&enable=1&prop=id&dir=desc",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"image"
+							],
+							"query": [
+								{
+									"key": "global_search",
+									"value": "image"
+								},
+								{
+									"key": "enable",
+									"value": "1"
+								},
+								{
+									"key": "prop",
+									"value": "id"
+								},
+								{
+									"key": "dir",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/image?global_search=image&enable=1&prop=id&dir=desc",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image"
+									],
+									"query": [
+										{
+											"key": "global_search",
+											"value": "image"
+										},
+										{
+											"key": "enable",
+											"value": "1"
+										},
+										{
+											"key": "prop",
+											"value": "id"
+										},
+										{
+											"key": "dir",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:33:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:33:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": [\n            {\n                \"id\": 4,\n                \"name\": \"Image 4\",\n                \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e8ec03f08c0.png\",\n                \"enable\": 1\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Image 2\",\n                \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e8ebc3ddd26.png\",\n                \"enable\": 1\n            },\n            {\n                \"id\": 1,\n                \"name\": \"Image 1\",\n                \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e8ebbf3eb43.png\",\n                \"enable\": 1\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/image/1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/image/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"id\": 1,\n            \"name\": \"Image 1\",\n            \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e8ebbf3eb43.png\",\n            \"enable\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"New Image\",\r\n    \"enable\":1,\r\n    \"file\":\"data:image/png;base64,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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/image",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"New Image\",\r\n    \"enable\":1,\r\n    \"file\":\"data:image/png;base64,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\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/image",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:16 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"201 OK\",\n        \"status\": 201,\n        \"data\": {\n            \"name\": \"New Image\",\n            \"enable\": 1,\n            \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e9858855776.png\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Update Image\",\r\n    \"enable\":1,\r\n    \"file\":\"data:image/png;base64,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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/image/1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Update Image\",\r\n    \"enable\":1,\r\n    \"file\":\"data:image/png;base64,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\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/image/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"name\": \"Update Image\",\n            \"enable\": 1,\n            \"file\": \"C:\\\\xampp74\\\\htdocs\\\\surplus-syarif\\\\storage\\\\images/63e9859b658ee.png\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/image/1",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/image/1",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"image",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:49 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 13 Feb 2023 00:34:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.34"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": {\n        \"message\": \"200 OK\",\n        \"status\": 200,\n        \"data\": {\n            \"id\": \"1\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_url",
+			"value": "http://127.0.0.1:8000/api/v1",
+			"type": "string"
+		}
+	]
+}
