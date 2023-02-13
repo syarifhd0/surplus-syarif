@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Requests\CategoryRequest;
+use App\Http\Requests\CategoryProductRequest;
 use App\Models\Category;
 use App\Models\CategoryProduct;
 use App\Models\Product;
@@ -175,6 +176,11 @@ class CategoryController extends Controller
 	 */
 	public function getCategoryProduct($categoryId, Request $request)
 	{
+		$model = $this->table->find($categoryId);
+		if (!$model) {
+			return $this->errorResponse('Not found', 404);
+		}
+
 		try {
 			$query = new Product;
 			$query = $query->whereHas('category_product',function($q) use ($categoryId){
@@ -193,7 +199,7 @@ class CategoryController extends Controller
 	 * @param \Illuminate\Http\Request $request
 	 * @return \Illuminate\Http\JsonResponse
 	 */
-	public function postCategoryProductById($categoryId, $productId, Request $request)
+	public function postCategoryProductById($categoryId, $productId, CategoryProductRequest $request)
 	{
 		$model = $this->table->find($categoryId);
 

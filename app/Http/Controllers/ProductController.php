@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Requests\ProductRequest;
+use App\Http\Requests\ProductImageRequest;
+use App\Http\Requests\CategoryProductRequest;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\CategoryProduct;
@@ -178,6 +180,11 @@ class ProductController extends Controller
 	 */
 	public function getCategoryProduct($productId, Request $request)
 	{
+		$model = $this->table->find($productId);
+		if (!$model) {
+			return $this->errorResponse('Not found', 404);
+		}
+
 		try {
 			$query = new Category;
 			$query = $query->whereHas('category_product',function($q) use ($productId){
@@ -196,7 +203,7 @@ class ProductController extends Controller
 	 * @param \Illuminate\Http\Request $request
 	 * @return \Illuminate\Http\JsonResponse
 	 */
-	public function postCategoryProductById($productId, $categoryId, Request $request)
+	public function postCategoryProductById($productId, $categoryId, CategoryProductRequest $request)
 	{
 		$model = $this->table->find($productId);
 
@@ -263,6 +270,11 @@ class ProductController extends Controller
 	*/
    public function getProductImage($productId, Request $request)
    {
+	   $model = $this->table->find($productId);
+	   if (!$model) {
+	   		return $this->errorResponse('Not found', 404);
+	   }
+
 	   try {
 		   $query = new Image;
 		   $query = $query->whereHas('product_image',function($q) use ($productId){
@@ -281,7 +293,7 @@ class ProductController extends Controller
 	* @param \Illuminate\Http\Request $request
 	* @return \Illuminate\Http\JsonResponse
 	*/
-   public function postProductImageById($productId, $imageId, Request $request)
+   public function postProductImageById($productId, $imageId, ProductImageRequest $request)
    {
 	   $model = $this->table->find($productId);
 

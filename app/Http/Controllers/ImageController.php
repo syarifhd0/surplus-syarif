@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Traits\ResponseTrait;
 use App\Http\Requests\ImageRequest;
+use App\Http\Requests\ProductImageRequest;
 use App\Models\Image;
 use App\Models\Product;
 use App\Models\ProductImage;
@@ -215,6 +216,12 @@ class ImageController extends Controller
 	*/
 	public function getProductImage($imageId, Request $request)
 	{
+
+		$model = $this->table->find($imageId);
+		if (!$model) {
+			return $this->errorResponse('Not found', 404);
+		}
+		
 		try {
 			$query = new Product;
 			$query = $query->whereHas('product_image',function($q) use ($imageId){
@@ -233,7 +240,7 @@ class ImageController extends Controller
 	 * @param \Illuminate\Http\Request $request
 	 * @return \Illuminate\Http\JsonResponse
 	 */
-	public function postProductImageById($imageId, $productId, Request $request)
+	public function postProductImageById($imageId, $productId, ProductImageRequest $request)
 	{
 		$model = $this->table->find($imageId);
  
